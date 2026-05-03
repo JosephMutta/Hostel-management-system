@@ -1,0 +1,102 @@
+/* Full-screen background */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: url('../images/hostel_background.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay to darken background */
+.background-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Wrapper for 4 blocks */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.left-blocks, .right-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+.block {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(4px);
+}
+
+/* Hostel carousel */
+.carousel-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    gap: 20px;
+    padding-left: 100%;
+}
+
+.hostel-card {
+    min-width: 200px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* Moving animation */
+@keyframes scroll {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.login-link {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.login-link a {
+    background-color: #ffffffaa;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.login-link a:hover {
+    background-color: #ddd;
+}
